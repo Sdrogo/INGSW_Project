@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+
+   <description url="ZipEditor Updates">
+      ZipEditor list of features
+   </description>
+   <feature url="features/zipeditor_1.0.3.jar" id="zipeditor" version="1.0.3">
+      <category name="ZipEditor"/>
+   </feature>
+   <feature url="features/zipeditor_1.0.4.jar" id="zipeditor" version="1.0.4">
+      <category name="ZipEditor"/>
+   </feature>
+   <feature url="features/zipeditor_1.0.5.jar" id="zipeditor" version="1.0.5">
+      <category name="ZipEditor"/>
+   </feature>
+   <feature url="features/zipeditor_1.0.6.jar" id="zipeditor" version="1.0.6">
+      <category name="ZipEditor"/>
+   </feature>
+   <feature url="features/zipeditor_1.0.7.jar" id="zipeditor" version="1.0.7">
+      <category name="ZipEditor"/>
+   </feature>
+   <feature url="features/zipeditor_1.0.8.jar" id="zipeditor" version="1.0.8">
+      <category name="ZipEditor"/>
+   </feature>
+   <feature url="features/zipeditor_1.0.9.jar" id="zipeditor" version="1.0.9">
+      <category name="ZipEditor"/>
+   </feature>
+   <feature url="features/zipeditor_1.1.0.jar" id="zipeditor" version="1.1.0">
+      <category name="ZipEditor"/>
+   </feature>
+   <feature url="features/zipeditor_1.1.1.201303181845.jar" id="zipeditor" version="1.1.1.201303181845">
+      <category name="ZipEditor"/>
+   </feature>
+   <feature url="features/zipeditor_1.1.2.201612122332.jar" id="zipeditor" version="1.1.2.201612122332">
+      <category name="ZipEditor"/>
+   </feature>
+   <feature url="features/zipeditor_1.1.3.201703012047.jar" id="zipeditor" version="1.1.3.201703012047">
+      <category name="ZipEditor"/>
+   </feature>
+
+   <category-def name="ZipEditor" label="Eclipse ZipEditor">
+      <description>
+         Here you find all available versions of the Eclipse ZipEditor.
+      </description>
+   </category-def>
+</site>
