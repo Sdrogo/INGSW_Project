@@ -1,0 +1,96 @@
+import java.awt.BorderLayout;
+import java.awt.Container;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.beans.PropertyChangeEvent;
+import java.io.IOException;
+import java.net.URL;
+import javax.swing.Box;
+import javax.swing.JEditorPane;
+import javax.swing.JFrame;
+import javax.swing.JScrollPane;
+import javax.swing.event.HyperlinkEvent;
+
+
+yeeee 
+
+public class Frame extends JFrame {
+  JEditorPane editorPane = new JEditorPane();
+
+  public Frame(String title) {
+    super(title);
+    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    Container contentPane = this.getContentPane();
+    Box editorPaneBox = this.getEditPaneBox();
+    editorPaneBox.addKeyListener(new KeyListener() {
+		
+		@Override
+		public void keyTyped(KeyEvent e) {
+			editorPaneBox.add(e.toString(), editorPaneBox);
+		}
+		
+		@Override
+		public void keyReleased(KeyEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+		
+		@Override
+		public void keyPressed(KeyEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+	});
+    contentPane.add(editorPaneBox, BorderLayout.CENTER);
+    jsyntaxpane.DefaultSyntaxKit.initKit();
+    editorPane.setContentType("text/java");
+  
+  }
+  private Box getEditPaneBox() {
+    editorPane.setEditable(false);
+    Box editorBox = Box.createHorizontalBox();
+    editorBox.add(new JScrollPane(editorPane));
+
+  /*  editorPane.addHyperlinkListener((HyperlinkEvent event) -> {
+      if (event.getEventType() == HyperlinkEvent.EventType.ACTIVATED) {
+        go(event.getURL());
+      } else if (event.getEventType() == HyperlinkEvent.EventType.ENTERED) {
+        System.out.println("click this link");
+      } else if (event.getEventType() == HyperlinkEvent.EventType.EXITED) {
+        System.out.println("Ready");
+      }
+    });
+*/
+    editorPane.addPropertyChangeListener((PropertyChangeEvent e) -> {
+      String propertyName = e.getPropertyName();
+      if (propertyName.equalsIgnoreCase("page")) {
+        URL url = editorPane.getPage();
+        System.out.println(url.toExternalForm());
+      }
+    });
+
+    return editorBox;
+  }
+/*  public void go(URL url) {
+    try {
+      editorPane.setPage(url);
+
+    } catch (IOException e) {
+      System.out.println(e.getMessage());
+    }
+  }
+  public void go(String urlString) {
+    try {
+      URL url = new URL(urlString);
+      go(url);
+    } catch (IOException e) {
+      System.out.println(e.getMessage());
+    }
+  }*/
+  public static void main(String[] args) {
+    Frame browser = new Frame("");
+    browser.setSize(700, 500);
+    browser.setVisible(true);
+    //browser.go("http://www.java2s.com/Tutorials/Java/Java_Swing/0860__Java_Swing_JEditorPane.htm");
+  }
+}
